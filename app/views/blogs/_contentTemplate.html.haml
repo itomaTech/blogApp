@@ -1,0 +1,12 @@
+- @blogs.each do |blog|
+  .content
+    .content__text-box
+      = markdown(blog.text).html_safe
+    .content__btn-box
+      - if user_signed_in? && current_user.id == blog.user_id
+        .content__btn-box__edit-btn
+          = link_to "編集", "/blogs/#{blog.id}/edit", method: :get
+        .content__btn-box__delete-btn
+          = link_to "削除", "/blogs/#{blog.id}", method: :delete, data: { confirm: '本当に削除してよろしいですか？'}
+      - else
+        .content__dummy

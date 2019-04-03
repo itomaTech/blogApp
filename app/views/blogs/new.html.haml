@@ -1,0 +1,14 @@
+/ .wrapper
+/   .content
+/     .text-box
+/     = form_tag method: :post do |blog|
+/       = blog.text_area :text
+/       = blog.submit value: :おくる
+.wrapper
+  .contet
+    .title
+      %h3 編集画面です
+    .text-box
+      = form_with scope: :blog, url: '/blogs', html: {class: "text_field"} do |f|
+        = f.text_area :text
+        = f.submit value: :おくる

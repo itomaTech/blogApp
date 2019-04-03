@@ -1,0 +1,8 @@
+.wrapper
+  .contet
+    .title
+      %h3 投稿画面です
+    .text-box
+      = form_with model: @blog, method: :patch, html: {class: "text_field"} do |f|
+        = f.text_area :text, placeholder: "#{@blog.text}",size: "120x100"
+        = f.submit value: :編集オッケー

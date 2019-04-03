@@ -1,0 +1,72 @@
+// Place all the styles related to the blogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.light-blue {
+  position: fixed;
+}
+
+.wrapper {
+  background-color: #5f9ea0;
+  height: 100%;
+  .box {
+    height: 200px;
+    & {
+      background-color: #ffb6c1;
+      width: 40vw;
+      &{
+        text-align:center;
+        line-height: 264px;
+        font-size: 30px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.content {
+  overflow: scroll;
+  & {
+    background-color: #fff0f5;
+    border-radius: 40px;
+    margin: 40px;
+    p {
+      padding: 10px 40px 10px 40px;
+    }
+  }
+  .content__btn-box {
+
+    .content__btn-box__edit-btn {
+      border: 1px solid #000;
+      margin: 10px 20px 10px 10px;
+      width: 80px;
+      float: right;
+
+      text-align: center;
+      a {
+        color: #ffa500;
+      }
+    }
+    .content__btn-box__delete-btn {
+      border: 1px solid #000;
+      margin: 10px;
+      width: 80px;
+      text-align: center;
+      float: right;
+      a {
+        color: red;
+      }
+    }
+    .content__dummy {
+      border: 0px solid;
+      margin: 10px 20px 10px 10px;
+      height: 27px;
+    }
+  }
+}
+
+

@@ -1,0 +1,16 @@
+.wrapper
+  .box
+    .box__name
+    - if user_signed_in?
+      .box__name__sign-in #{current_user.name}さん、こんにちは！
+    - else
+      .box__name__others ログインすることをおすすめします
+
+  = render 'contentTemplate'
+
+
+
+
+
+
+%script{:src => "./app.js", :type => "text/javascript"}
